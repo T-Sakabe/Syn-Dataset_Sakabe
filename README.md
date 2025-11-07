@@ -22,7 +22,7 @@ Each dataset is provided as a ZIP archive containing two CSV files.
 
 | Dataset | Download | Contents |
 |----------|-----------|-----------|
-| **Syn-MNIST** | [data/Syn-MNIST.zip](https://github.com/T.Sakabe/Example_Syn-Dataset/Data/Syn-MNIST.zip) | `Syn-MNIST_images.csv`, `Syn-MNIST_labels.csv` |
+| **Syn-MNIST** | [data/Syn-MNIST.zip](https://github.com/T-Sakabe/Example_Syn-Dataset/blob/main/data/Syn-MNIST.zip) | `Syn-MNIST_images.csv`, `Syn-MNIST_labels.csv` |
 | **Syn-Fashion-MNIST** | [data/Syn-Fashion-MNIST.zip](./data/Syn-Fashion-MNIST.zip) | `Syn-Fashion-MNIST_images.csv`, `Syn-Fashion-MNIST_labels.csv` |
 | **Syn-FER-2013** | [data/Syn-FER-2013.zip](./data/Syn-FER-2013.zip) | `Syn-FER-2013_images.csv`, `Syn-FER-2013_labels.csv` |
 
