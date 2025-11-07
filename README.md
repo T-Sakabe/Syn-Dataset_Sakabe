@@ -15,8 +15,6 @@ Each Syn-Dataset is an enhanced version of an existing benchmark dataset, design
 - **Syn-FER-2013**: based on [FER-2013](https://www.kaggle.com/datasets/msambare/fer2013) (35,887 samples, 48×48 grayscale)
 
 
----
-
 ## Why we created Syn-Datasets
 Common benchmark datasets such as MNIST, Fashion-MNIST, and FER-2013 are widely used in educational ML competitions. However, these datasets **do not consider participants’ ability distributions or task difficulty**, making it difficult to accurately distinguish performance differences among models.
 
