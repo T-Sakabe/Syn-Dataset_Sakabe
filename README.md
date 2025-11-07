@@ -4,7 +4,7 @@
 **Syn-Datasets** are image datasets automatically generated using a framework proposed in *“Dataset Construction Using Item Response Theory for Educational Machine Learning Competitions.”* This framework combines **Item Response Theory (IRT)** with a **Conditional Variational Autoencoder (CVAE)** to create datasets that can more accurately evaluate the performance differences among machine learning (ML) models.
 
 <p align="center">
-  <img src="framework_overview.png" alt="Overview of the proposed IRT+CVAE framework" width="600"><br>
+  <img src="./image/Framework_Overview.png" alt="Overview of the proposed IRT+CVAE framework" width="600"><br>
   <em>Figure 1. Overview of the proposed dataset generation framework (IRT + CVAE)</em>
 </p>
 
@@ -27,7 +27,7 @@ To address this issue, our proposed framework automatically generates datasets w
 Below is an example of generated Syn-MNIST images with specified difficulty and discrimination parameters.
 
 <p align="center">
-  <img src="syn_mnist_examples.png" alt="Examples of Syn-MNIST generated images by difficulty and discrimination" width="600"><br>
+  <img src="./image/Syn_Mnist_Examples.png" alt="Examples of Syn-MNIST generated images by difficulty and discrimination" width="600"><br>
   <em>Figure 2. Examples of generated Syn-MNIST images (controlled by difficulty and discrimination)</em>
 </p>
 
