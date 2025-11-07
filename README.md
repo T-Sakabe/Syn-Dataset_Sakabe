@@ -69,3 +69,73 @@ If you use these datasets in your publication, please cite:
   publisher = {IEEE}
 }
 ```
+
+
+
+# 🧠 Syn-Datasets (Syn-MNIST, Syn-Fashion-MNIST, Syn-FER-2013)
+
+## Overview
+**Syn-Datasets** provide *synthetic image-classification datasets* generated using **Item Response Theory (IRT)**.  
+They are designed as drop-in replacements or enhancements for the original benchmark datasets:
+
+| Dataset | Original Source | Image Shape | Samples |
+|----------|------------------|--------------|-----------|
+| **Syn-MNIST** | [MNIST](http://yann.lecun.com/exdb/mnist/) | 28×28 (flattened to 784) | 70,000 |
+| **Syn-Fashion-MNIST** | [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) | 28×28 (flattened to 784) | 70,000 |
+| **Syn-FER-2013** | [FER-2013](https://www.kaggle.com/datasets/deadskull7/fer2013) | 48×48 (flattened to 2304) | 35,882 |
+
+Each dataset consists of two CSV files:
+- `*_imgs.csv` — pixel intensity values (0–255)
+- `*_labels.csv` — corresponding class labels (integers)
+
+All classes follow the same mappings as the original datasets.
+
+---
+
+## Why we created these datasets
+The original benchmark datasets are widely used for model evaluation, but they do not capture differences in *item difficulty* or *model ability*.  
+Using **IRT (Item Response Theory)**, we associate each synthetic item (image) with difficulty and discrimination parameters, and simulate “learner” (model) ability parameters (θ).
+
+These datasets enable researchers and educators to:
+
+- Analyze model performance across varying item difficulties  
+- Evaluate robustness under controlled item-response settings  
+- Use in competitions or educational experiments involving IRT
+
+---
+
+## 📦 Get the Data
+
+Each dataset is provided as a ZIP archive containing two CSV files.
+
+| Dataset | Download | Contents |
+|----------|-----------|-----------|
+| **Syn-MNIST** | [data/Syn-MNIST.zip](./data/Syn-MNIST.zip) | `Syn-MNIST_imgs.csv`, `Syn-MNIST_labels.csv` |
+| **Syn-Fashion-MNIST** | [data/Syn-Fashion-MNIST.zip](./data/Syn-Fashion-MNIST.zip) | `Syn-Fashion-MNIST_imgs.csv`, `Syn-Fashion-MNIST_labels.csv` |
+| **Syn-FER-2013** | [data/Syn-FER-2013.zip](./data/Syn-FER-2013.zip) | `Syn-FER-2013_imgs.csv`, `Syn-FER-2013_labels.csv` |
+
+*(You can right-click the links above → “Save link as…” to download)*
+
+---
+
+## 🧩 Usage Example (Python)
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import zipfile
+
+# Load Syn-MNIST directly from the ZIP archive
+with zipfile.ZipFile("data/Syn-MNIST.zip") as z:
+    with z.open("Syn-MNIST_imgs.csv") as f1, z.open("Syn-MNIST_labels.csv") as f2:
+        imgs = pd.read_csv(f1, header=None).values
+        labels = pd.read_csv(f2, header=None).values
+
+# Display a sample image
+index = 0
+image = imgs[index].reshape(28, 28)
+label = labels[index, 0]
+
+plt.imshow(image, cmap="gray", vmin=0, vmax=255)
+plt.title(f"Label: {label}")
+plt.show()
