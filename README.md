@@ -5,7 +5,7 @@
 
 <p align="center">
   <img src="./image/Framework_Overview.png" alt="Overview of the proposed IRT+CVAE framework" width="600"><br>
-  <em>Figure 1. Overview of the proposed dataset generation framework (IRT + CVAE)</em>
+  <em>Figure 1. Overview of the proposed dataset generation framework</em>
 </p>
 
 Each Syn-Dataset is an enhanced version of an existing benchmark dataset, designed to maintain the original structure:
