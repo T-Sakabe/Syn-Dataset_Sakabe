@@ -27,7 +27,7 @@ To address this issue, our proposed framework automatically generates datasets w
 Below is an example of generated Syn-MNIST images with specified difficulty and discrimination parameters.
 
 <p align="center">
-  <img src="./image/Syn_Mnist_Examples.png" alt="Examples of Syn-MNIST generated images by difficulty and discrimination" width="600"><br>
+  <img src="./image/Syn-MNIST_Examples.png" alt="Examples of Syn-MNIST generated images by difficulty and discrimination" width="600"><br>
   <em>Figure 2. Examples of generated Syn-MNIST images (controlled by difficulty and discrimination)</em>
 </p>
 
