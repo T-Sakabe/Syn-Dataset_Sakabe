@@ -22,9 +22,7 @@ Common benchmark datasets such as MNIST, Fashion-MNIST, and FER-2013 are widely 
 
 For example, many standard ML models achieve over 90% accuracy on MNIST with default settings, which limits their effectiveness in assessing participants’ skills or model improvements.
 
-To address this issue, our proposed IRT+CVAE framework automatically generates datasets with **controllable item difficulty and discrimination**, allowing fairer and more effective evaluation of model performance.
-
-Through this framework, datasets with controllable **item difficulty** and **discrimination** can be generated automatically, enabling more effective and fair performance evaluation.
+To address this issue, our proposed framework automatically generates datasets with **controllable item difficulty and discrimination**, allowing fairer and more effective evaluation of model performance.
 
 Below is an example of generated Syn-MNIST images with specified difficulty and discrimination parameters.
 
