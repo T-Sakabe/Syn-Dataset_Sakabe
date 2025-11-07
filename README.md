@@ -22,9 +22,9 @@ Each dataset is provided as a ZIP archive containing two CSV files.
 
 | Dataset | Download | Contents |
 |----------|-----------|-----------|
-| **Syn-MNIST** | [data/Syn-MNIST.zip](./data/Syn-MNIST.zip) | `Syn-MNIST_imgs.csv`, `Syn-MNIST_labels.csv` |
-| **Syn-Fashion-MNIST** | [data/Syn-Fashion-MNIST.zip](./data/Syn-Fashion-MNIST.zip) | `Syn-Fashion-MNIST_imgs.csv`, `Syn-Fashion-MNIST_labels.csv` |
-| **Syn-FER-2013** | [data/Syn-FER-2013.zip](./data/Syn-FER-2013.zip) | `Syn-FER-2013_imgs.csv`, `Syn-FER-2013_labels.csv` |
+| **Syn-MNIST** | [data/Syn-MNIST.zip](./data/Syn-MNIST.zip) | `Syn-MNIST_images.csv`, `Syn-MNIST_labels.csv` |
+| **Syn-Fashion-MNIST** | [data/Syn-Fashion-MNIST.zip](./data/Syn-Fashion-MNIST.zip) | `Syn-Fashion-MNIST_images.csv`, `Syn-Fashion-MNIST_labels.csv` |
+| **Syn-FER-2013** | [data/Syn-FER-2013.zip](./data/Syn-FER-2013.zip) | `Syn-FER-2013_images.csv`, `Syn-FER-2013_labels.csv` |
 
 ## Labels
 The class labels follow the original dataset mapping:
@@ -43,12 +43,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load dataset
-imgs = pd.read_csv("Syn-MNIST_imgs.csv", header=None).values
+images = pd.read_csv("Syn-MNIST_images.csv", header=None).values
 labels = pd.read_csv("Syn-MNIST_labels.csv", header=None).values
 
 # Display a sample image
 index = 0
-image = imgs[index].reshape(28, 28)
+image = images[index].reshape(28, 28)
 label = labels[index, 0]
 
 plt.imshow(image, cmap="gray", vmin=0, vmax=255)
